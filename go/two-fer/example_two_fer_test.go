@@ -17,4 +17,11 @@ func ExampleShareWith() {
 	h := ShareWith("")
 	fmt.Println(h)
 	// Output: One for you, one for me.
+
+}
+
+func ExampleShareWith_second() {
+	e := ShareWith("Erica")
+	fmt.Println(e)
+	// Output: One for Erica, one for me.
 }
