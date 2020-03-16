@@ -9,9 +9,11 @@ import "fmt"
 
 // ShareWith reads a string input, checks if it is empty, if it is, assigns "you" to name and outputs a string
 func ShareWith(name string) string {
-	if len(name) < 1 {
+	// Mentor feedback: it's really only looking for 0
+	if len(name) == 0 {
 		name = "you"
 	}
 
-	return fmt.Sprintf("One for %v, one for me.",name)
+	// Mentor feedback, using specific types for Sprintf protects against undesired behavior if this code is refactored.
+	return fmt.Sprintf("One for %s, one for me.", name)
 }
